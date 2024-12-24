@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from "react";
+import Wrapper from "./Wrapper";
+import SplashScreen from "./screens/splash";
 
 const App = () => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
-}
+  const [isSplashScreen, setIsSplashScreen] = useState(true);
 
-export default App
+  setTimeout(() => {
+    setIsSplashScreen(false);
+  }, 2000);
 
-const styles = StyleSheet.create({})
+  return isSplashScreen ? <SplashScreen /> : <Wrapper />;
+};
+
+export default App;

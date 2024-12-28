@@ -6,6 +6,7 @@ const AppNavigation = () => {
   const isAuthenticated = useSelector(
     (state: RootState) => state.auth.isLoggedIn
   );
+  console.log(isAuthenticated);
   return isAuthenticated ? <TabNavigation /> : <AuthStack />;
 };
 

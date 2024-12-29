@@ -4,7 +4,7 @@ import React from "react";
 const AuthScreen = () => {
   return (
     <View>
-      <Text>AuthScreen</Text>
+      <Text>Hello there</Text>
     </View>
   );
 };

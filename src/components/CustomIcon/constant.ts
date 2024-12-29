@@ -1,8 +1,10 @@
+import { House, Book, User, MessageSquareDot } from "lucide-react-native";
+
 const CustomIconMap = {
-  Home: "home",
-  Learning: "book",
-  Profile: "user",
-  AIChat: "chat",
+  Home: House,
+  Learning: Book,
+  Profile: User,
+  AIChat: MessageSquareDot,
 };
 
 export default CustomIconMap;

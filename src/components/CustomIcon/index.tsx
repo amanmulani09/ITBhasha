@@ -1,17 +1,16 @@
+import { Alert } from "react-native";
 import CustomIconMap from "./constant";
-import IconComponent from "react-native-vector-icons/FontAwesome6";
 const CustomIcon = ({
   name,
-  size,
   color,
+  size,
 }: {
-  name: keyof typeof CustomIconMap;
-  size: number;
+  name: string;
   color: string;
+  size: number;
 }) => {
-  const IconName = CustomIconMap[name];
-  console.log(IconName);
-  return <IconComponent name={IconName} size={size} color={color} />;
+  const Icon = CustomIconMap[name as keyof typeof CustomIconMap];
+  Alert.alert("13");
+  return <Icon color={color} size={size} />;
 };
-
 export default CustomIcon;
